@@ -1,0 +1,290 @@
+/**
+ * FAAIZA MUNIR - AUTHOR WEBSITE
+ * Editorial Header & Navigation
+ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-rule);
+  box-shadow: 0 1px 3px rgba(20, 19, 18, 0.03);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  transition: padding var(--duration-normal) var(--ease),
+    box-shadow var(--duration-normal) var(--ease);
+}
+
+.site-header.is-scrolled {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-rule);
+  box-shadow: 0 4px 16px rgba(20, 19, 18, 0.06);
+}
+
+.header-inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+/* Author Wordmark (Left Column) */
+.site-brand {
+  justify-self: start;
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.brand-name {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--text-primary);
+  line-height: 1;
+  transition: color var(--duration-fast) var(--ease);
+}
+
+.site-brand:hover .brand-name {
+  color: var(--color-accent-main);
+}
+
+/* Main Navigation (Centered in Middle Column) */
+.nav-desktop {
+  justify-self: center;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 1.8vw, 1.75rem);
+  list-style: none;
+}
+
+.nav-link {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+  position: relative;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  letter-spacing: var(--tracking-wide);
+  transition: color var(--duration-fast) var(--ease),
+    background-color var(--duration-fast) var(--ease);
+}
+
+.nav-link:hover {
+  color: var(--color-accent-main);
+  background-color: rgba(14, 77, 60, 0.08);
+}
+
+.nav-link.is-active {
+  color: var(--color-accent-main);
+  font-weight: 700;
+  background-color: rgba(14, 77, 60, 0.08);
+}
+
+.nav-link.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  background-color: var(--color-accent-main);
+  border-radius: 1px;
+}
+
+/* Social Icon / Instagram (Right Column) */
+.header-social {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+}
+
+.social-link-editorial {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-rule);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  color: var(--text-primary);
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(20, 19, 18, 0.04);
+  transition: color var(--duration-fast) var(--ease),
+    background-color var(--duration-fast) var(--ease),
+    border-color var(--duration-fast) var(--ease),
+    transform var(--duration-fast) var(--ease);
+}
+
+.social-link-editorial svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+
+.social-link-editorial:hover {
+  color: var(--color-accent-main);
+  border-color: var(--color-accent-main);
+  background-color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+/* -------------------------------------------------------------
+   MOBILE MENU TOGGLE & CLEAN SLIDE-OVER DRAWER
+   ------------------------------------------------------------- */
+.mobile-toggle {
+  display: none;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger-box {
+  width: 22px;
+  height: 16px;
+  position: relative;
+}
+
+.hamburger-line {
+  display: block;
+  position: absolute;
+  height: 1.5px;
+  width: 100%;
+  background-color: var(--text-primary);
+  left: 0;
+  transition: transform var(--duration-normal) var(--ease),
+    opacity var(--duration-fast) var(--ease),
+    top var(--duration-normal) var(--ease);
+}
+
+.hamburger-line:nth-child(1) {
+  top: 0px;
+}
+
+.hamburger-line:nth-child(2) {
+  top: 7px;
+}
+
+.hamburger-line:nth-child(3) {
+  top: 14px;
+}
+
+.mobile-toggle.is-open .hamburger-line:nth-child(1) {
+  top: 7px;
+  transform: rotate(45deg);
+}
+
+.mobile-toggle.is-open .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-toggle.is-open .hamburger-line:nth-child(3) {
+  top: 7px;
+  transform: rotate(-45deg);
+}
+
+.mobile-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(22, 21, 20, 0.4);
+  z-index: 150;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-normal) var(--ease);
+}
+
+.mobile-drawer-backdrop.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(85vw, 380px);
+  background-color: var(--bg-primary);
+  z-index: 160;
+  transform: translateX(100%);
+  transition: transform var(--duration-normal) var(--ease);
+  box-shadow: -6px 0 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-3xl) var(--space-xl) var(--space-xl);
+  border-left: 1px solid var(--border-rule);
+}
+
+.mobile-drawer.is-open {
+  transform: translateX(0);
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color var(--duration-fast) var(--ease),
+    padding-left var(--duration-fast) var(--ease);
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.is-active {
+  color: var(--color-accent-main);
+  padding-left: 6px;
+}
+
+.mobile-drawer-footer {
+  margin-top: auto;
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border-rule);
+}
+
+@media (max-width: 860px) {
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-desktop,
+  .header-social {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+}

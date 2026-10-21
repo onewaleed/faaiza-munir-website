@@ -1,0 +1,218 @@
+/**
+ * FAAIZA MUNIR - AUTHOR WEBSITE
+ * Responsive Media Queries & Mobile Optimisations
+ */
+
+/* -------------------------------------------------------------
+   TABLET & INTERMEDIATE BREAKPOINTS (max-width: 1024px)
+   ------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .hero-media {
+    order: -1;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .featured-book-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+
+  .featured-book-grid .book-showcase-stage {
+    order: -1;
+  }
+
+  .intro-about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+
+  .intro-photo-col {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .journal-split-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+/* -------------------------------------------------------------
+   MOBILE DEVICES (max-width: 768px)
+   ------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .section {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-3xl);
+  }
+
+  .hero-section {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-3xl);
+  }
+
+  .hero-headline {
+    font-size: clamp(2.6rem, 11vw, 3.8rem);
+  }
+
+  .hero-lead {
+    font-size: 1.05rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-floating-card {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: var(--space-md);
+    max-width: 100%;
+    animation: none;
+  }
+
+  .card-grid,
+  .card-grid--2col {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .event-card {
+    flex-direction: column;
+  }
+
+  .event-date-box {
+    width: 100%;
+    min-width: unset;
+    border-right: none;
+    border-bottom: 1px solid var(--color-green-border);
+    padding: var(--space-md);
+    flex-direction: row;
+    gap: var(--space-sm);
+  }
+
+  .event-date-day {
+    font-size: 1.8rem;
+  }
+
+  .event-date-month {
+    margin-top: 0;
+  }
+
+  .event-details {
+    padding: var(--space-lg);
+  }
+
+  .newsletter-card {
+    padding: var(--space-2xl) var(--space-lg);
+    border-radius: var(--radius-lg);
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .newsletter-form .form-group,
+  .newsletter-form .btn-newsletter-submit {
+    width: 100%;
+  }
+
+  .retailer-grid {
+    flex-direction: column;
+  }
+
+  .btn-retailer {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .book-details-list {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .intro-pillars {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-quote-badge {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: var(--space-md);
+    max-width: 100%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .footer-legal-links {
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+}
+
+/* -------------------------------------------------------------
+   SMALL PHONES (max-width: 480px)
+   ------------------------------------------------------------- */
+@media (max-width: 480px) {
+  :root {
+    --container-pad: 1rem;
+  }
+
+  .hero-credentials {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+  }
+
+  .brand-name {
+    font-size: 1.25rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.62rem;
+  }
+
+  .toast-msg {
+    left: 16px;
+    right: 16px;
+    bottom: 20px;
+  }
+}

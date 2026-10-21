@@ -1,0 +1,127 @@
+/**
+ * FAAIZA MUNIR - AUTHOR WEBSITE
+ * Editorial Design System & Tokens
+ *
+ * Colour Direction: Inspired by the "Arranged Murder" book cover:
+ * - Warm cream / soft off-white paper foundation
+ * - Near-black / dark charcoal typography
+ * - Vivid bold pink accent (used intentionally for key moments)
+ * - Fresh bright leafy green accent
+ * - Zero burnt orange, zero muddy heritage tones, zero generic beige
+ */
+
+:root {
+  /* -------------------------------------------------------------
+     COLOUR PALETTE
+     Client-Refined Future-Proof Editorial Palette:
+     - Base: soft off-white (#FAF8F5)
+     - Text: near black (#141312)
+     - Primary accent: strong green / deep teal-green (#0E4D3C)
+     - Secondary accent: bright coral / pink (#E83D58)
+     - Optional accents (used sparingly): cobalt, muted purple, golden yellow
+     ------------------------------------------------------------- */
+  
+  /* Foundation Backgrounds (Soft Off-White Base) */
+  --bg-primary: #FAF8F5;        /* Soft off-white literary paper */
+  --bg-surface: #FFFFFF;        /* Crisp white for image plates & contrast */
+  --bg-subtle: #F3EFEA;         /* Soft warm linen for alternating bands */
+  --bg-dark-block: #141312;     /* Deep printing ink for high-contrast moments */
+
+  /* Text & Ink (Near Black) */
+  --text-primary: #141312;      /* Near black / deep printing ink */
+  --text-secondary: #3A3734;    /* Warm balanced charcoal for reading copy */
+  --text-muted: #726D66;        /* Editorial captions, dates & metadata */
+  --text-inverse: #FAF8F5;      /* Soft off-white on dark surfaces */
+
+  /* Editorial Borders & Rules */
+  --border-rule: #E5DFD5;       /* Clean hairline dividing rule */
+  --border-rule-dark: #141312;  /* Confident structural rule */
+  --border-subtle: rgba(20, 19, 18, 0.08);
+
+  /* Primary Accent: Strong Green / Deep Teal-Green */
+  --color-accent-main: #0E4D3C;
+  --color-accent-main-hover: #09372B;
+  --color-accent-main-soft: #ECF5F2;
+  --color-accent-main-border: rgba(14, 77, 60, 0.22);
+
+  /* Secondary Accent: Bright Coral / Pink */
+  --color-accent-sec: #E83D58;
+  --color-accent-sec-hover: #D42844;
+  --color-accent-sec-soft: #FDF1F3;
+  --color-accent-sec-border: rgba(232, 61, 88, 0.25);
+
+  /* Optional Accents (Used Sparingly) */
+  /* Cobalt */
+  --color-accent-cobalt: #1845C2;
+  --color-accent-cobalt-soft: #EEF3FC;
+
+  /* Muted Purple */
+  --color-accent-purple: #6B3D6B;
+  --color-accent-purple-soft: #F6EFF6;
+
+  /* Golden Yellow */
+  --color-accent-yellow: #E5A118;
+  --color-accent-yellow-soft: #FEF7ED;
+  --color-accent-yellow-border: rgba(229, 161, 24, 0.3);
+
+  /* Book Specific Accent Tokens (Sampled directly from Arranged Murder cover) */
+  --color-book-pink: #E02868;       /* Signature magenta-pink title */
+  --color-book-green: #4D7E15;      /* Signature leaf/author green */
+
+  /* -------------------------------------------------------------
+     TYPOGRAPHY
+     Classic literary serif paired with disciplined modern sans.
+     ------------------------------------------------------------- */
+  --font-serif: "Fraunces", "Georgia", "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Disciplined Type Scale */
+  --text-hero-name: clamp(2.4rem, 4.4vw, 3.6rem);
+  --text-hero-standfirst: clamp(1.2rem, 1.8vw, 1.45rem);
+  --text-title-lg: clamp(1.85rem, 3vw, 2.4rem);
+  --text-title-md: clamp(1.4rem, 2.2vw, 1.8rem);
+  --text-body-lead: clamp(1.05rem, 1.2vw, 1.18rem);
+  --text-body: 1rem;
+  --text-sm: 0.88rem;
+  --text-xs: 0.78rem;
+
+  /* Line Heights */
+  --lh-tight: 1.05;
+  --lh-snug: 1.25;
+  --lh-normal: 1.5;
+  --lh-reading: 1.65;
+
+  /* Letter Spacing */
+  --tracking-tight: -0.015em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.04em;
+  --tracking-caps: 0.08em;
+  --tracking-widest: 0.14em;
+
+  /* -------------------------------------------------------------
+     LAYOUT & SPACING
+     ------------------------------------------------------------- */
+  --container-max: 1200px;
+  --container-pad: clamp(1.5rem, 5vw, 3.5rem);
+
+  --space-xs: 0.5rem;   /* 8px */
+  --space-sm: 0.75rem;  /* 12px */
+  --space-md: 1rem;     /* 16px */
+  --space-lg: 1.5rem;   /* 24px */
+  --space-xl: 2rem;     /* 32px */
+  --space-2xl: 3rem;    /* 48px */
+  --space-3xl: 4.5rem;  /* 72px */
+  --space-4xl: 6rem;    /* 96px */
+
+  /* Straight Edges */
+  --radius-none: 0px;
+
+  /* Restrained Shadows */
+  --shadow-book: 0 14px 34px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-plate: 0 8px 24px rgba(22, 21, 20, 0.06);
+
+  /* Transitions */
+  --duration-fast: 160ms;
+  --duration-normal: 260ms;
+  --ease: cubic-bezier(0.2, 0, 0.2, 1);
+}

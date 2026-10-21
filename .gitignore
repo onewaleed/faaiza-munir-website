@@ -1,0 +1,5 @@
+.DS_Store
+find_top
+inspect_green
+print_profile
+*.o
