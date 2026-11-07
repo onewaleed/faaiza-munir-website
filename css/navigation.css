@@ -9,33 +9,24 @@
   left: 0;
   width: 100%;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.72);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.78) 0%, rgba(250, 248, 245, 0.62) 100%);
-  backdrop-filter: blur(20px) saturate(190%) contrast(102%);
-  -webkit-backdrop-filter: blur(20px) saturate(190%) contrast(102%);
-  border-bottom: 1px solid transparent;
-  box-shadow: 0 4px 24px -1px rgba(20, 19, 18, 0.05),
-              0 1px 2px 0 rgba(20, 19, 18, 0.03),
-              inset 0 1px 0 0 rgba(255, 255, 255, 0.95);
-  transform: translateZ(0);
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-rule);
+  box-shadow: 0 2px 12px rgba(20, 19, 18, 0.03);
   padding-top: 16px;
   padding-bottom: 16px;
   transition: padding var(--duration-normal) var(--ease),
-    background var(--duration-normal) var(--ease),
-    backdrop-filter var(--duration-normal) var(--ease),
     box-shadow var(--duration-normal) var(--ease),
-    border-color var(--duration-normal) var(--ease);
+    background-color var(--duration-normal) var(--ease);
 }
 
 .site-header.is-scrolled {
   padding-top: 12px;
   padding-bottom: 12px;
-  background: rgba(255, 255, 255, 0.88);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(250, 248, 245, 0.82) 100%);
-  backdrop-filter: blur(24px) saturate(200%);
-  -webkit-backdrop-filter: blur(24px) saturate(200%);
-  border-bottom: 1px solid rgba(20, 19, 18, 0.08);
-  box-shadow: 0 10px 30px rgba(20, 19, 18, 0.07), inset 0 1px 0 0 rgba(255, 255, 255, 1);
+  background-color: rgba(250, 248, 245, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-rule-dark);
+  box-shadow: 0 4px 20px rgba(20, 19, 18, 0.06);
 }
 
 .header-inner {
