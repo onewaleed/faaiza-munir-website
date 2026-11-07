@@ -297,7 +297,7 @@
 .book-feature-grid {
   display: grid;
   grid-template-columns: 0.95fr 1.15fr;
-  align-items: start;
+  align-items: stretch;
   gap: clamp(var(--space-xl), 5vw, var(--space-4xl));
 }
 
@@ -306,6 +306,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   position: relative;
   padding: 0;
 }
@@ -414,13 +415,20 @@
   background-color: var(--color-accent-main);
 }
 
+.book-info-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
 .book-feature-title {
   font-family: var(--font-serif);
   font-size: var(--text-title-lg);
   font-weight: 600;
   line-height: 1.1;
   color: var(--text-primary);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .book-feature-tagline {
@@ -429,7 +437,7 @@
   font-style: italic;
   color: var(--color-accent-sec);
   font-weight: 500;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-xl);
   line-height: var(--lh-snug);
 }
 
@@ -437,18 +445,18 @@
   font-family: var(--font-sans);
   font-size: var(--text-body);
   color: var(--text-secondary);
-  line-height: var(--lh-reading);
-  margin-bottom: var(--space-md);
+  line-height: 1.72;
+  margin-bottom: 1.15rem;
 }
 
 /* Thin Ruled Metadata Strip */
 .book-metadata-strip {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-md);
+  gap: var(--space-md) var(--space-lg);
   padding: var(--space-md) 0;
-  margin-top: var(--space-sm);
-  margin-bottom: var(--space-lg);
+  margin-top: auto;
+  margin-bottom: 4px;
   border-top: 1px solid var(--border-rule);
   border-bottom: 1px solid var(--border-rule);
 }
@@ -508,6 +516,13 @@
   flex: 1 1 auto;
   text-align: center;
   white-space: nowrap;
+}
+
+.book-explore-wrap {
+  margin-top: var(--space-md);
+  padding-bottom: 2px;
+  display: flex;
+  align-items: center;
 }
 
 /* General Pre-order Retailers (Clean Rectangular Buttons) */
@@ -642,6 +657,7 @@
   .book-cover-column {
     order: -1;
     align-items: center;
+    justify-content: flex-start;
   }
 
   .book-cover-plate {
@@ -650,6 +666,15 @@
 
   .book-retailers-card {
     max-width: 290px;
+  }
+
+  .book-info-column {
+    height: auto;
+  }
+
+  .book-metadata-strip {
+    margin-top: var(--space-xl);
+    margin-bottom: 0;
   }
 }
 
