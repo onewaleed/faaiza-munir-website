@@ -100,7 +100,7 @@ window.AUTHOR_DATA = {
       categoryClass: "badge--green",
       publishDate: "October 2026",
       readTime: "4 min read",
-      image: "assets/journal-writing.jpg",
+      image: "assets/writing-desk-reading-lamp.jpg",
       excerpt: "Why the darkest mysteries are often best served with buttered toast, neurotic family WhatsApp groups, and a touch of Scottish dry wit."
     },
     {
