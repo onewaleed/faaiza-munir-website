@@ -359,6 +359,203 @@
   border-color: var(--color-accent-main);
 }
 
+/* Featured Festival Spotlight Banner */
+.featured-festival-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  max-width: 900px;
+  margin: 0 auto var(--space-2xl);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-rule);
+  overflow: hidden;
+  transition: border-color var(--duration-fast) var(--ease),
+              box-shadow var(--duration-fast) var(--ease);
+}
+
+.featured-festival-banner:hover {
+  border-color: var(--color-accent-main);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.featured-festival-banner-media {
+  min-height: 260px;
+  position: relative;
+  overflow: hidden;
+  background-color: #EFECE6;
+}
+
+.festival-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  overflow: hidden;
+}
+
+.festival-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.festival-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.festival-carousel-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+  padding: 4px 8px;
+  background: rgba(20, 19, 18, 0.45);
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+}
+
+.festival-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease), transform var(--duration-fast) var(--ease);
+}
+
+.festival-dot.is-active {
+  background-color: #FFFFFF;
+  transform: scale(1.25);
+}
+
+.featured-festival-banner-content {
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-festival-kicker {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  color: var(--color-accent-sec);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.featured-festival-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: var(--lh-snug);
+  margin-bottom: 4px;
+}
+
+.featured-festival-meta {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-bottom: var(--space-xs);
+  font-weight: 400;
+}
+
+.featured-festival-desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--lh-normal);
+  margin-bottom: var(--space-md);
+}
+
+/* Harrogate Photo Dispatch Grid */
+.harrogate-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  max-width: 900px;
+  margin: var(--space-xl) auto 0;
+}
+
+.harrogate-gallery-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-rule);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--duration-fast) var(--ease),
+              box-shadow var(--duration-fast) var(--ease);
+}
+
+.harrogate-gallery-card:hover {
+  border-color: var(--color-accent-main);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.harrogate-gallery-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: #EFECE6;
+}
+
+.harrogate-gallery-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.harrogate-gallery-card:hover .harrogate-gallery-media img {
+  transform: scale(1.03);
+}
+
+.harrogate-gallery-body {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.harrogate-gallery-kicker {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  color: var(--color-accent-sec);
+  margin-bottom: 4px;
+}
+
+.harrogate-gallery-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.harrogate-gallery-desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--lh-normal);
+  margin-bottom: 0;
+}
+
 /* -------------------------------------------------------------
    6. PRESS & MEDIA KIT SPECIFICS
    ------------------------------------------------------------- */
@@ -1054,9 +1251,10 @@ textarea.form-control {
   .about-preview-grid,
   .preview-duo-grid,
   .press-grid,
-  .contact-layout-grid {
+  .contact-layout-grid,
+  .harrogate-gallery-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-2xl);
+    gap: var(--space-xl);
   }
 
   .event-card {
@@ -1077,6 +1275,16 @@ textarea.form-control {
   .footer-top-grid {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-festival-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-festival-banner-media {
+    min-height: 220px;
   }
 }
 

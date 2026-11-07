@@ -39,6 +39,19 @@ window.AUTHOR_DATA = {
 
   events: [
     {
+      id: "harrogate-crime-writing-festival",
+      title: "Theakston Old Peculier Crime Writing Festival",
+      festival: "Harrogate Crime Writing Festival",
+      dateDay: "22–25",
+      dateMonth: "Jul",
+      year: "2027",
+      location: "Old Swan Hotel, Harrogate, North Yorkshire",
+      type: "Headline Festival & Panels",
+      image: "assets/harrogate-festival-marquee.jpg",
+      desc: "Join Faaiza Munir in Harrogate for the UK’s pinnacle crime writing festival weekend, featuring panel discussions, author signings, and festival marquee gatherings at the historic Old Swan Hotel.",
+      ticketLink: "events.html"
+    },
+    {
       id: "brighton-festival",
       title: "Debut Crime Writers Panel: Humour in Mystery",
       festival: "Brighton Book Festival",

@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/navigation.css?v=26">
-  <link rel="stylesheet" href="css/editorial-pages.css">
+  <link rel="stylesheet" href="css/editorial-pages.css?v=35">
 </head>
 
 <body>
@@ -101,7 +101,7 @@
     <header class="page-header-editorial">
       <div class="container page-header-inner">
         <span class="page-kicker">FAAIZA MUNIR • OFFICIAL AUTHOR WEBSITE</span>
-        <h1 class="page-title">Events & Talks</h1>
+        <h1 class="page-title">Events & Appearances</h1>
         <p class="page-lead">
           Join Faaiza Munir for literary festival panels, independent bookshop signings, and lively conversations on
           cosy crime, humour, and complicated family dynamics.
@@ -114,27 +114,44 @@
       <div class="container">
 
         <!-- Featured Festival Banner Card -->
-        <div class="featured-festival-banner"
-          style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-xl); align-items: center; background-color: var(--bg-surface); border: 1px solid var(--border-rule-dark); box-shadow: 6px 6px 0 var(--color-accent-main-soft); margin-bottom: var(--space-2xl); overflow: hidden;">
-          <div style="height: 100%; min-height: 260px;">
-            <img src="assets/event-brighton.jpg" alt="Literary festival marquee by the sea"
-              style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="eager">
+        <div class="featured-festival-banner">
+          <div class="featured-festival-banner-media">
+            <div class="festival-carousel" id="festivalCarousel" aria-label="Harrogate Festival Image Gallery">
+              <div class="festival-track" id="festivalTrack">
+                <img src="assets/harrogate-festival-marquee-clean.jpg"
+                  alt="Festival marquee tent with giant READ letters on the lawn at the Old Swan Hotel, Harrogate"
+                  class="festival-slide" loading="eager">
+                <img src="assets/harrogate-festival-banner-16-9.jpg"
+                  alt="Official welcome banner for Theakston Old Peculier Crime Writing Festival Harrogate with crimson fingerprint logo"
+                  class="festival-slide" loading="lazy">
+                <img src="assets/harrogate-town-mural.jpg"
+                  alt="Vibrant colourful street mural spelling out Harrogate on stone wall"
+                  class="festival-slide" loading="lazy">
+              </div>
+              <div class="festival-carousel-dots" role="tablist" aria-label="Slide indicators">
+                <button type="button" class="festival-dot is-active" aria-label="Slide 1" data-index="0"></button>
+                <button type="button" class="festival-dot" aria-label="Slide 2" data-index="1"></button>
+                <button type="button" class="festival-dot" aria-label="Slide 3" data-index="2"></button>
+              </div>
+            </div>
           </div>
-          <div style="padding: var(--space-xl);">
-            <span
-              style="font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: var(--tracking-caps); color: var(--color-accent-sec); display: block; margin-bottom: 4px;">
-              Featured Season Highlight
-            </span>
-            <h2
-              style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--text-primary); margin-bottom: var(--space-xs);">
-              Brighton Book Festival 2027
+          <div class="featured-festival-banner-content">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-sm); margin-bottom: 4px;">
+              <span class="event-type-tag">Featured Season Highlight • Harrogate</span>
+              <span style="font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: var(--tracking-caps); color: var(--text-muted);">22–25 Jul 2027</span>
+            </div>
+            <h2 class="event-title" style="font-size: 1.45rem; margin-bottom: 4px;">
+              Theakston Old Peculier Crime Writing Festival
             </h2>
-            <p
-              style="font-size: var(--text-sm); color: var(--text-secondary); line-height: var(--lh-normal); margin-bottom: var(--space-md);">
-              Faaiza headlines the seaside marquee for an afternoon exploring family secrets, comic timing, and the joys
-              of amateur sleuthing over tea.
+            <p class="event-location" style="margin-bottom: var(--space-xs);">
+              Old Swan Hotel • Harrogate, North Yorkshire
             </p>
-            <a href="contact.html" class="btn-event-action">Register for Brighton Session →</a>
+            <p class="event-desc" style="margin-bottom: var(--space-md);">
+              Known throughout publishing simply as "Harrogate", this is the UK’s pinnacle festival of crime and mystery fiction. Join Faaiza Munir for panels exploring cosy crime, family comedy, and the art of amateur sleuthing.
+            </p>
+            <div>
+              <a href="contact.html" class="btn-event-action">Register / Info</a>
+            </div>
           </div>
         </div>
 
@@ -160,7 +177,26 @@
             </div>
           </article>
 
-          <!-- Event 2 -->
+          <!-- Event 2: Harrogate -->
+          <article class="event-card">
+            <div class="event-date-badge">
+              <span class="event-day" style="font-size: 1.55rem; line-height: 1.15;">22–25</span>
+              <span class="event-month-year">Jul 2027</span>
+            </div>
+            <div class="event-details">
+              <span class="event-type-tag">Headline Festival • Harrogate</span>
+              <h2 class="event-title">Theakston Old Peculier Crime Writing Festival</h2>
+              <p class="event-location">Old Swan Hotel • Harrogate, North Yorkshire</p>
+              <p class="event-desc">
+                The world’s premier crime writing festival. Faaiza joins fellow authors, reviewers, and crime enthusiasts for festival marquee panels, book signings, and late-night whodunnit conversations.
+              </p>
+            </div>
+            <div>
+              <a href="contact.html" class="btn-event-action">Register / Info</a>
+            </div>
+          </article>
+
+          <!-- Event 3 -->
           <article class="event-card">
             <div class="event-date-badge">
               <span class="event-day">28</span>
@@ -180,7 +216,7 @@
             </div>
           </article>
 
-          <!-- Event 3 -->
+          <!-- Event 4 -->
           <article class="event-card">
             <div class="event-date-badge">
               <span class="event-day">21</span>
@@ -200,7 +236,7 @@
             </div>
           </article>
 
-          <!-- Event 4 -->
+          <!-- Event 5 -->
           <article class="event-card">
             <div class="event-date-badge">
               <span class="event-day">18</span>
@@ -222,6 +258,71 @@
 
         </div>
 
+      </div>
+    </section>
+
+    <!-- Dedicated Harrogate Festival Dispatch & Photo Feature -->
+    <section class="section-editorial section-editorial--subtle">
+      <div class="container">
+        <div style="max-width: 780px; margin: 0 auto var(--space-2xl); text-align: center;">
+          <span class="page-kicker">ON THE FESTIVAL CIRCUIT • THE CAPITAL OF CRIME FICTION</span>
+          <h2 style="font-family: var(--font-serif); font-size: 2.1rem; color: var(--text-primary); margin-bottom: var(--space-xs);">
+            Dispatches from Harrogate
+          </h2>
+          <p style="color: var(--text-secondary); font-size: var(--text-body); line-height: var(--lh-reading); margin: 0 auto;">
+            To authors, publishers, and crime fiction fans across the globe, the Theakston Old Peculier Crime Writing Festival is known simply by one word: <em>Harrogate</em>. Hosted every summer at the historic Old Swan Hotel in North Yorkshire, it is the beating heart of the British mystery scene.
+          </p>
+        </div>
+
+        <div class="harrogate-gallery-grid">
+          <!-- Card 1: Festival Grounds & Lawn -->
+          <article class="harrogate-gallery-card">
+            <div class="harrogate-gallery-media">
+              <img src="assets/harrogate-festival-marquee-clean.jpg"
+                alt="Festival marquee tent with giant READ letters on the lawn at the Old Swan Hotel, Harrogate"
+                loading="lazy">
+            </div>
+            <div class="harrogate-gallery-body">
+              <span class="harrogate-gallery-kicker">Festival Grounds</span>
+              <h3 class="harrogate-gallery-title">The Old Swan Marquee & Grounds</h3>
+              <p class="harrogate-gallery-desc">
+                The landmark giant orange "READ" installation welcoming crime writers and avid mystery readers onto the festival lawns at the historic Old Swan Hotel.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 2: Official Festival Welcome Banner -->
+          <article class="harrogate-gallery-card">
+            <div class="harrogate-gallery-media">
+              <img src="assets/harrogate-festival-banner-16-9.jpg"
+                alt="Official welcome banner for Theakston Old Peculier Crime Writing Festival Harrogate with crimson fingerprint logo"
+                loading="lazy">
+            </div>
+            <div class="harrogate-gallery-body">
+              <span class="harrogate-gallery-kicker">The Official Welcome</span>
+              <h3 class="harrogate-gallery-title">Theakston Old Peculier Crime Festival</h3>
+              <p class="harrogate-gallery-desc">
+                The official entrance banner and box office, bearing the legendary crimson fingerprint motif of the world’s foremost crime writing gathering.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 3: The Town Mural -->
+          <article class="harrogate-gallery-card">
+            <div class="harrogate-gallery-media">
+              <img src="assets/harrogate-town-mural.jpg"
+                alt="Vibrant colourful street mural spelling out Harrogate on stone wall"
+                loading="lazy">
+            </div>
+            <div class="harrogate-gallery-body">
+              <span class="harrogate-gallery-kicker">The Host Town</span>
+              <h3 class="harrogate-gallery-title">The Town of Harrogate</h3>
+              <p class="harrogate-gallery-desc">
+                The colourful town mural in Harrogate, North Yorkshire—celebrating the beloved spa town known to mystery writers simply as ‘Harrogate’.
+              </p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -311,6 +412,52 @@
   <script src="js/navigation.js"></script>
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+    // Auto-sliding festival image scroll carousel (every 5 seconds)
+    (function initFestivalCarousel() {
+      const carousel = document.getElementById("festivalCarousel");
+      const track = document.getElementById("festivalTrack");
+      if (!carousel || !track) return;
+      const slides = track.querySelectorAll(".festival-slide");
+      const dots = carousel.querySelectorAll(".festival-dot");
+      if (slides.length <= 1) return;
+
+      let currentIndex = 0;
+      let timer = null;
+
+      function goToSlide(index) {
+        dots[currentIndex].classList.remove("is-active");
+        currentIndex = (index + slides.length) % slides.length;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots[currentIndex].classList.add("is-active");
+      }
+
+      function startTimer() {
+        stopTimer();
+        timer = setInterval(() => {
+          goToSlide(currentIndex + 1);
+        }, 5000);
+      }
+
+      function stopTimer() {
+        if (timer) {
+          clearInterval(timer);
+          timer = null;
+        }
+      }
+
+      dots.forEach((dot, idx) => {
+        dot.addEventListener("click", () => {
+          goToSlide(idx);
+          startTimer();
+        });
+      });
+
+      carousel.addEventListener("mouseenter", stopTimer);
+      carousel.addEventListener("mouseleave", startTimer);
+
+      startTimer();
+    })();
   </script>
 </body>
 
