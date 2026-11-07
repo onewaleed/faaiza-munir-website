@@ -25,7 +25,7 @@
   overflow: hidden;
 }
 
-/* Author Background Spread (Locked Centered) */
+/* Full-Bleed Author Background Spread (Seamless Left Blend, Zero Top Gap) */
 .hero-backdrop-spread {
   position: absolute;
   top: 0;
@@ -37,16 +37,15 @@
   pointer-events: none;
   z-index: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-end;
 }
 
 .hero-backdrop-img {
   height: 100%;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
-  object-position: center bottom;
+  width: 100%;
+  object-fit: cover;
+  object-position: right bottom;
   display: block;
 }
 
