@@ -25,27 +25,28 @@
   overflow: hidden;
 }
 
-/* Full-Bleed Author Background Spread (Anchored Right & Bottom, Stable Proportion) */
+/* Author Background Spread (Locked Centered) */
 .hero-backdrop-spread {
   position: absolute;
-  top: 15px;
+  top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
   width: 100%;
-  height: calc(100% - 15px);
+  height: 100%;
   pointer-events: none;
   z-index: 1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-end;
 }
 
 .hero-backdrop-img {
   height: 100%;
   width: auto;
-  max-width: none;
+  max-width: 100%;
   object-fit: contain;
-  object-position: right bottom;
+  object-position: center bottom;
   display: block;
 }
 
