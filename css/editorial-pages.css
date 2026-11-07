@@ -757,40 +757,42 @@ textarea.form-control {
 }
 
 /* -------------------------------------------------------------
-   9. GLOBAL FULL EDITORIAL FOOTER
+   9. GLOBAL FULL EDITORIAL FOOTER (Compact & Grounded)
    ------------------------------------------------------------- */
 .site-footer-full {
   background-color: var(--bg-dark-block);
   color: var(--text-inverse);
-  padding-top: clamp(var(--space-3xl), 6vw, var(--space-4xl));
-  padding-bottom: var(--space-2xl);
-  border-top: 1px solid var(--border-rule-dark);
+  padding-top: clamp(2rem, 3.5vw, 2.75rem);
+  padding-bottom: clamp(1.25rem, 2vw, 1.75rem);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-top-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
-  gap: var(--space-2xl);
-  margin-bottom: var(--space-3xl);
+  grid-template-columns: 1.25fr 0.9fr 0.95fr 1.2fr;
+  gap: clamp(1.5rem, 2.8vw, 2.5rem);
+  margin-bottom: clamp(1.25rem, 2.2vw, 1.75rem);
+  align-items: start;
 }
 
 .footer-brand-title {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: var(--tracking-caps);
   color: #FFFFFF;
-  margin-bottom: var(--space-xs);
+  margin-bottom: 0;
 }
 
 .footer-brand-subtitle {
   font-family: var(--font-sans);
-  font-size: var(--text-sm);
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.65);
   line-height: var(--lh-normal);
   max-width: 32ch;
-  margin-bottom: var(--space-md);
+  margin-top: 6px;
+  margin-bottom: 0;
 }
 
 .footer-heading {
@@ -800,19 +802,19 @@ textarea.form-control {
   text-transform: uppercase;
   letter-spacing: var(--tracking-widest);
   color: var(--color-accent-sec);
-  margin-bottom: var(--space-md);
+  margin-bottom: 10px;
 }
 
 .footer-nav-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: 6px;
 }
 
 .footer-nav-list a {
-  font-size: var(--text-sm);
-  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.72);
   text-decoration: none;
   transition: color var(--duration-fast) var(--ease);
 }
@@ -823,10 +825,10 @@ textarea.form-control {
 
 /* Newsletter Strip in Footer */
 .footer-newsletter-text {
-  font-size: var(--text-xs);
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: var(--space-sm);
-  line-height: var(--lh-normal);
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 8px;
+  line-height: 1.45;
 }
 
 .footer-newsletter-form {
@@ -836,7 +838,7 @@ textarea.form-control {
 
 .footer-newsletter-input {
   flex: 1;
-  padding: 10px 12px;
+  padding: 8px 10px;
   background-color: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #FFFFFF;
@@ -851,7 +853,7 @@ textarea.form-control {
 }
 
 .footer-newsletter-btn {
-  padding: 10px 16px;
+  padding: 8px 14px;
   background-color: var(--color-accent-sec);
   color: #FFFFFF;
   border: 1px solid var(--color-accent-sec);
@@ -872,14 +874,14 @@ textarea.form-control {
   justify-content: space-between;
   align-items: center;
   gap: var(--space-md);
-  padding-top: var(--space-xl);
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  font-size: var(--text-xs);
-  color: rgba(255, 255, 255, 0.55);
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .footer-bottom-bar a {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.75);
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: color var(--duration-fast) var(--ease);
@@ -1088,7 +1090,7 @@ textarea.form-control {
 
   .footer-top-grid {
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-xl);
+    gap: var(--space-lg);
   }
 }
 
@@ -1105,5 +1107,6 @@ textarea.form-control {
 @media (max-width: 540px) {
   .footer-top-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-lg);
   }
 }
