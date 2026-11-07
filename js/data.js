@@ -8,12 +8,12 @@ window.AUTHOR_DATA = {
   author: {
     name: "Faaiza Munir",
     tagline: "British author writing character-led cosy crime & mystery with humour",
-    bioShort: "Faaiza Munir is a British author whose crime writing is shaped by sharp observation, eccentric families, and warm Scottish humour. Based between Scotland and London, she is fascinated by theatre, brilliant dialogue, and the messy secrets ordinary people try to keep.",
-    location: "Scotland & London, UK",
+    bioShort: "Faaiza Munir is from Glasgow, Scotland but lives in London with her husband, three children, and a very unbothered cat. Her debut novel, Arranged Murder, is out in March 2027.",
+    location: "London and Glasgow, UK",
     genre: "Cosy Crime / Mystery Fiction with Humour",
     instagram: "https://instagram.com/faaizamunir",
-    agent: "Fletcher & Co Literary Agency, London (UK & Translation Rights)",
-    publicist: "UK & International Publicity Enquiries: press@faaizamunir.com"
+    agent: "Darley Anderson Agency & Associates (Camilla Bolton)",
+    publicist: "Beth.Wright@quercusbooks.co.uk"
   },
 
   books: [
@@ -22,8 +22,9 @@ window.AUTHOR_DATA = {
       title: "Arranged Murder",
       series: "The Asghar Family Mysteries • Book 1",
       tagline: "Four sisters. One dead body. And a hunt for the perfect husband.",
-      synopsis: "When a family gathering to discuss matrimonial prospects ends with an unexpected corpse in the drawing room, four fiercely opinionated British-Pakistani sisters realise that one of the potential suitors might just be a killer. Armed with boundless wit, family loyalties, and an absurdly unreliable suspect list, they must untangle the truth before wedding season turns deadly.",
-      publicationDate: "Publishing 2027",
+      synopsis: "One of four sisters, south Londoner and British Pakistani Iman Asghar has so far been unlucky in love. So she decides to try an arranged marriage, allowing her widower mum, Raheela, to use a matchmaker to find the perfect husband. With everything planned for the big day, the family gather in their home to welcome her third potential match, Dawud. What isn’t planned is Dawud dropping dead in the Asghars’ living room. The police rule his death as an accident – a verdict that does little to change the minds of the community, who are convinced that Iman’s family murdered her potential match. In a bid to clear her family’s name, Iman decides to investigate. And as she gets to know Dawud’s extended family and friends, she begins to suspect that his death may not have been an accident after all . . .",
+      publicationDate: "March 2027",
+      publisher: "Quercus",
       formats: "Hardback, Paperback, eBook & Audiobook",
       coverImage: "assets/arranged-murder-cover.jpg",
       isDebut: true,
@@ -33,8 +34,20 @@ window.AUTHOR_DATA = {
         { name: "Bookshop.org", url: "#", icon: "🏛️" },
         { name: "Foyles", url: "#", icon: "📖" }
       ]
+    },
+    {
+      id: "asghar-mysteries-book-2",
+      title: "The Asghar Family Mysteries: Book 2",
+      series: "The Asghar Family Mysteries • Book 2",
+      tagline: "Hafsa's story.",
+      synopsis: "Faaiza is currently writing the second instalment in The Asghar Family Mysteries series, which follows the youngest sister, Hafsa. As the youngest in a loud, opinionated family, Hafsa is used to navigating the chaos of family life. However, when she unexpectedly stumbles upon a murder mystery of her own, she finds herself caught up in a case that she must solve.",
+      publicationDate: "Forthcoming",
+      publisher: "Quercus",
+      formats: "Hardback, Paperback, eBook & Audiobook",
+      coverImage: null,
+      isDebut: false,
+      retailers: []
     }
-    /* Future Book 2, Book 3 can be appended here cleanly without redesigning */
   ],
 
   events: [
