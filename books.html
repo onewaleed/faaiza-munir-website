@@ -20,8 +20,8 @@
 
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/navigation.css?v=26">
-  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/navigation.css?v=27">
+  <link rel="stylesheet" href="css/home.css?v=33">
   <link rel="stylesheet" href="css/editorial-pages.css">
 </head>
 
@@ -117,13 +117,26 @@
         <div class="book-feature-grid">
 
           <!-- Book Stage with Interactive 3D Cursor Tilt -->
-          <div class="book-cover-column" id="bookStage">
-            <div class="book-cover-plate" id="bookCoverPlate">
-              <img src="assets/arranged-murder-cover.jpg" alt="Arranged Murder book cover by Faaiza Munir" width="666"
-                height="1024" loading="eager">
-              <div class="book-glare" id="bookGlare" aria-hidden="true"></div>
+          <div class="book-cover-column">
+            <div class="book-stage-wrap" id="bookStage">
+              <div class="book-cover-plate" id="bookCoverPlate">
+                <img src="assets/arranged-murder-cover.jpg" alt="Arranged Murder book cover by Faaiza Munir" width="666"
+                  height="1024" loading="eager">
+                <div class="book-glare" id="bookGlare" aria-hidden="true"></div>
+              </div>
+              <div class="book-ambient-shadow" id="bookShadow" aria-hidden="true"></div>
             </div>
-            <div class="book-ambient-shadow" id="bookShadow" aria-hidden="true"></div>
+
+            <!-- Pre-Order Retailers Under Book -->
+            <div class="book-retailers-card">
+              <span class="retailer-row-label">Pre-Order Retailers:</span>
+              <div class="retailer-links-row">
+                <a href="https://www.waterstones.com/books/search/term/Arranged+Murder+Faaiza+Munir" target="_blank" rel="noopener noreferrer" class="btn-retailer-rect">Waterstones ↗</a>
+                <a href="https://www.amazon.co.uk/s?k=Arranged+Murder+Faaiza+Munir" target="_blank" rel="noopener noreferrer" class="btn-retailer-rect">Amazon UK ↗</a>
+                <a href="https://uk.bookshop.org/search?keywords=Arranged+Murder+Faaiza+Munir" target="_blank" rel="noopener noreferrer" class="btn-retailer-rect">Bookshop.org ↗</a>
+                <!-- Foyles hidden until live: <a href="https://www.foyles.co.uk/search?q=Arranged+Murder+Faaiza+Munir" target="_blank" rel="noopener noreferrer" class="btn-retailer-rect">Foyles ↗</a> -->
+              </div>
+            </div>
           </div>
 
           <!-- Book Synopsis Column -->
@@ -167,15 +180,6 @@
                 <span class="metadata-label">Publisher</span>
                 <span class="metadata-val">Quercus</span>
               </div>
-            </div>
-
-            <!-- Pre-Order Links -->
-            <span class="retailer-row-label">Pre-Order Retailers:</span>
-            <div class="retailer-links-row">
-              <a href="https://www.waterstones.com/books/search/term/Arranged+Murder+Faaiza+Munir" target="_blank" rel="noopener noreferrer" class="btn-retailer-rect">Waterstones ↗</a>
-              <a href="https://www.amazon.co.uk/s?k=Arranged+Murder+Faaiza+Munir" target="_blank" rel="noopener noreferrer" class="btn-retailer-rect">Amazon UK ↗</a>
-              <a href="https://uk.bookshop.org/search?keywords=Arranged+Murder+Faaiza+Munir" target="_blank" rel="noopener noreferrer" class="btn-retailer-rect">Bookshop.org ↗</a>
-              <!-- Foyles hidden until live: <a href="https://www.foyles.co.uk/search?q=Arranged+Murder+Faaiza+Munir" target="_blank" rel="noopener noreferrer" class="btn-retailer-rect">Foyles ↗</a> -->
             </div>
 
           </div>
