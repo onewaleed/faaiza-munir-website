@@ -199,6 +199,16 @@
   margin: var(--space-3xl) auto 0;
 }
 
+.reading-group-box {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-rule);
+  padding: clamp(var(--space-2xl), 4vw, var(--space-3xl)) clamp(var(--space-lg), 3vw, var(--space-2xl));
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(20, 19, 18, 0.03);
+}
+
 /* -------------------------------------------------------------
    5. EVENTS PAGE SPECIFICS
    ------------------------------------------------------------- */
