@@ -718,3 +718,24 @@
 .book-info-column { justify-content: center; }
 .book-info-column .book-metadata-strip { margin-top: var(--space-xl); }
 .book-info-column .book-synopsis-link { margin-top: var(--space-md); align-self: flex-start; }
+
+/* Press quotes floating around the cover on Home (like a book jacket) */
+.cover-quote { position: absolute; z-index: 3; margin: 0; pointer-events: none; }
+.cover-quote blockquote { margin: 0; font-family: var(--font-serif); }
+.cover-quote figcaption { font-family: var(--font-sans); font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+.cover-quote figcaption::before { content: "— "; }
+.cover-quote--card { top: -3%; left: -12%; width: 200px; padding: 14px 16px; background: var(--bg-surface); border-top: 3px solid var(--color-accent-sec); box-shadow: 0 10px 28px rgba(0,0,0,0.14); transform: rotate(-4deg); }
+.cover-quote--card blockquote { font-size: 0.98rem; line-height: 1.4; color: var(--text-secondary); }
+.cover-quote--card blockquote strong { font-weight: 600; color: var(--text-primary); }
+.cover-quote--card figcaption { margin-top: 8px; color: var(--color-accent-main); }
+.cover-quote--sticker { bottom: 2%; right: -6%; width: 138px; height: 138px; border-radius: 50%; background: var(--color-accent-sec); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 14px; box-shadow: 0 10px 24px rgba(232,61,88,0.35); transform: rotate(8deg); }
+.cover-quote--sticker blockquote { font-size: 1.2rem; font-style: italic; line-height: 1.15; color: #fff; }
+.cover-quote--sticker figcaption { margin-top: 6px; color: rgba(255,255,255,0.92); font-size: 0.6rem; }
+@media (max-width: 1100px) { .cover-quote--card { left: -6%; width: 175px; } .cover-quote--card blockquote { font-size: 0.9rem; } }
+@media (max-width: 540px) {
+  .cover-quote--card { top: -5%; left: -2%; width: 140px; padding: 9px 11px; }
+  .cover-quote--card blockquote { font-size: 0.78rem; }
+  .cover-quote--sticker { width: 96px; height: 96px; right: -1%; bottom: 3%; padding: 10px; }
+  .cover-quote--sticker blockquote { font-size: 0.95rem; }
+  .cover-quote--sticker figcaption { font-size: 0.5rem; }
+}
