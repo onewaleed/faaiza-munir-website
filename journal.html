@@ -154,7 +154,7 @@
                 and someone inevitably pointing out that the prime suspect had terrible manners.
               </p>
               <div>
-                <button type="button" class="btn-event-action" onclick="openEssayModal()">Read Full Essay →</button>
+                <span class="btn-event-action" style="cursor: default;">Essay coming soon</span>
               </div>
             </div>
           </article>
@@ -169,7 +169,7 @@
                 The Recipe for a Cosy Murder: Why Humour and Mystery Belong Together
               </h3>
               <div style="margin-top: auto; padding-top: var(--space-md);">
-                <span class="journal-read-link">Read Dispatch <span>→</span></span>
+                <span class="journal-read-link">Coming soon</span>
               </div>
             </div>
           </article>
@@ -184,7 +184,7 @@
                 My Five Favourite Murder Mysteries
               </h3>
               <div style="margin-top: auto; padding-top: var(--space-md);">
-                <span class="journal-read-link">Read Dispatch <span>→</span></span>
+                <span class="journal-read-link">Coming soon</span>
               </div>
             </div>
           </article>
@@ -199,7 +199,7 @@
                 How I Create My Characters
               </h3>
               <div style="margin-top: auto; padding-top: var(--space-md);">
-                <span class="journal-read-link">Read Dispatch <span>→</span></span>
+                <span class="journal-read-link">Coming soon</span>
               </div>
             </div>
           </article>
@@ -267,97 +267,10 @@
       </div>
     </div>
   </footer>
-  <!-- Essay Reading Modal -->
-  <div class="essay-modal-backdrop" id="essayModal" aria-hidden="true"
-    onclick="if(event.target === this) closeEssayModal()">
-    <div class="essay-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalEssayTitle">
-      <button type="button" class="essay-modal-close" onclick="closeEssayModal()" aria-label="Close essay">✕</button>
-
-      <div class="journal-tag-row" style="margin-bottom: var(--space-xs);">
-        <span class="journal-category-tag">Feature Essay • On Writing</span>
-        <span class="journal-read-time">5 min read</span>
-      </div>
-
-      <h2 id="modalEssayTitle"
-        style="font-family: var(--font-serif); font-size: clamp(1.6rem, 2.6vw, 2.2rem); color: var(--text-primary); line-height: 1.2; margin-bottom: var(--space-md);">
-        On Sisters, Samosas, and Solving Murders: How My Family Inspired Arranged Murder
-      </h2>
-
-      <div
-        style="font-size: var(--text-xs); color: var(--text-muted); margin-bottom: var(--space-xl); border-bottom: 1px solid var(--border-rule); padding-bottom: var(--space-sm);">
-        By Faaiza Munir • Dispatches from the Writing Desk
-      </div>
-
-      <div class="about-prose"
-        style="font-size: 1.05rem; line-height: var(--lh-reading); color: var(--text-secondary);">
-        <p class="lead-paragraph">
-          If you have ever attended a Pakistani family wedding, you will know that the investigative machinery of
-          Scotland Yard has nothing on an auntie who wants to know why you aren’t married yet.
-        </p>
-        <p>
-          She will cross-examine you on your career, your travel schedule, your dietary preferences, and your
-          third-cousin’s recent promotion in the space of four minutes—all while smiling warmly and pressing another
-          plate of warm gulab jamun into your hands.
-        </p>
-        <p>
-          It was during one such wedding gathering in Edinburgh that the seed for <em>Arranged Murder</em> took root. I
-          was sitting at a banquet table with my three real-life sisters. As usual, everyone had an opinion on everyone
-          else’s outfit, two sisters were debating whether the groom looked trustworthy, and someone was trying to
-          smuggle an extra platter of samosas to our table.
-        </p>
-        <div class="editorial-pullquote">
-          <p>“What would happen if the drawing-room murder took place not in an isolated manor house, but in the middle
-            of a chaotic, gossip-fuelled family gathering where everyone has a motive and nobody wants their samosas to
-            get cold?”</p>
-        </div>
-        <p>
-          Classic British murder mysteries have always been about human secrets behind polite facades. In
-          British-Pakistani culture, family loyalty is fierce, but the banter is ruthless. When a body turns up, nobody
-          panics silently. Everyone gathers around the kettle, multiple conflicting theories emerge, and the youngest
-          sister is inevitably dispatched to listen at the door.
-        </p>
-        <p>
-          That is the spirit of the Asghar sisters: Amina’s spreadsheets, Zara’s sharp eye for fabric and flaws, Nadia’s
-          morbid curiosity, and Shireen’s covert intelligence network. They fight constantly, but when danger threatens
-          their family, they are completely unstoppable.
-        </p>
-
-        <div class="about-author-signature">
-          <img src="assets/faaiza-signature-overlay.png" alt="Faaiza Munir signature" width="180" height="132"
-            loading="lazy">
-        </div>
-      </div>
-
-      <div
-        style="margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--border-rule); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-md);">
-        <a href="books.html" class="btn-editorial-solid">Explore Arranged Murder →</a>
-        <button type="button" class="btn-event-action" onclick="closeEssayModal()">Close Essay</button>
-      </div>
-
-    </div>
-  </div>
 
   <script src="js/navigation.js"></script>
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
-
-    function openEssayModal() {
-      const modal = document.getElementById("essayModal");
-      modal.classList.add("is-open");
-      modal.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeEssayModal() {
-      const modal = document.getElementById("essayModal");
-      modal.classList.remove("is-open");
-      modal.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
-    }
-
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") closeEssayModal();
-    });
   </script>
 </body>
 

@@ -714,3 +714,7 @@
     justify-content: center;
   }
 }
+/* Home book block without synopsis (synopsis lives on Books page) */
+.book-info-column { justify-content: center; }
+.book-info-column .book-metadata-strip { margin-top: var(--space-xl); }
+.book-info-column .book-synopsis-link { margin-top: var(--space-md); align-self: flex-start; }
