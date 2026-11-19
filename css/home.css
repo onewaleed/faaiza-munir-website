@@ -728,14 +728,58 @@
 .cover-quote--card blockquote { font-size: 0.98rem; line-height: 1.4; color: var(--text-secondary); }
 .cover-quote--card blockquote strong { font-weight: 600; color: var(--text-primary); }
 .cover-quote--card figcaption { margin-top: 8px; color: var(--color-accent-main); }
-.cover-quote--sticker { bottom: 2%; right: -6%; width: 138px; height: 138px; border-radius: 50%; background: var(--color-accent-sec); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 14px; box-shadow: 0 10px 24px rgba(232,61,88,0.35); transform: rotate(8deg); }
+.cover-quote--sticker { bottom: -22px; right: -46px; width: 138px; height: 138px; border-radius: 50%; background: var(--color-accent-sec); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 14px; box-shadow: 0 10px 24px rgba(232,61,88,0.35); transform: rotate(8deg); }
 .cover-quote--sticker blockquote { font-size: 1.2rem; font-style: italic; line-height: 1.15; color: #fff; }
 .cover-quote--sticker figcaption { margin-top: 6px; color: rgba(255,255,255,0.92); font-size: 0.6rem; }
 @media (max-width: 1100px) { .cover-quote--card { left: -6%; width: 175px; } .cover-quote--card blockquote { font-size: 0.9rem; } }
 @media (max-width: 540px) {
   .cover-quote--card { top: -5%; left: -2%; width: 140px; padding: 9px 11px; }
   .cover-quote--card blockquote { font-size: 0.78rem; }
-  .cover-quote--sticker { width: 96px; height: 96px; right: -1%; bottom: 3%; padding: 10px; }
-  .cover-quote--sticker blockquote { font-size: 0.95rem; }
-  .cover-quote--sticker figcaption { font-size: 0.5rem; }
+  .cover-quote--sticker { width: 82px; height: 82px; right: -20px; bottom: -30px; padding: 8px; }
+  .cover-quote--sticker blockquote { font-size: 0.8rem; }
+  .cover-quote--sticker figcaption { font-size: 0.45rem; margin-top: 3px; }
+}
+
+.book-info-column .home-teaser { margin-top: var(--space-md); }
+/* Centre the sticker text: balanced lines, no dash, name on one line */
+.cover-quote--sticker blockquote { text-wrap: balance; width: 100%; }
+.cover-quote--sticker figcaption { white-space: nowrap; }
+.cover-quote--sticker figcaption::before { content: none; }
+.cover-quote--sticker figcaption { padding-top: 5px; border-top: 1px solid rgba(255,255,255,0.7); }
+.cover-quote--sticker .sticker-handle { display: block; margin-top: 2px; font-weight: 500; text-transform: none; letter-spacing: 0.02em; opacity: 0.85; }
+/* Sticker moved to the top-right corner of the cover */
+.cover-quote--sticker { top: -34px; bottom: auto; right: -46px; }
+@media (max-width: 540px) { .cover-quote--sticker { top: -26px; bottom: auto; right: -20px; } }
+/* Sticker sits on a still wrapper so it doesn't tilt with the book */
+.cover-anchor { position: relative; width: min(100%, 350px); }
+.cover-anchor .book-cover-plate { width: 100%; }
+@media (max-width: 900px) { .cover-anchor { max-width: 290px; } }
+.cover-anchor .cover-quote--sticker { z-index: 5; }
+/* Gold star sitting half on, half off the top of the sticker */
+.sticker-star { position: absolute; top: 0; left: 50%; width: 30px; height: 30px; transform: translate(-50%, -50%); fill: #E9B949; stroke: #C8922A; stroke-width: 0.8; filter: drop-shadow(0 2px 3px rgba(0,0,0,0.25)); }
+@media (max-width: 540px) { .sticker-star { width: 20px; height: 20px; } }
+/* Star follows the sticker's angle, centred over the quote */
+.sticker-star { left: 50%; transform: translate(-50%, -50%); }
+.sticker-star { width: 40px; height: 40px; }
+@media (max-width: 540px) { .sticker-star { width: 26px; height: 26px; } }
+.sticker-q { font-size: 1.7em; line-height: 0; vertical-align: -0.28em; font-style: normal; }
+/* Bigger quote text on the sticker */
+.sticker-q { font-size: 1em; vertical-align: baseline; line-height: inherit; }
+.cover-quote--sticker blockquote { font-size: 1.5rem; line-height: 1.05; }
+@media (max-width: 540px) { .cover-quote--sticker blockquote { font-size: 0.95rem; } }
+.cover-quote--sticker .sticker-handle { margin-top: -1px; line-height: 1; }
+/* Star sits flat inside the pink circle, near the top (no shadow) */
+.sticker-star { top: 9px; width: 22px; height: 22px; transform: translateX(-50%); filter: none; stroke: none; }
+@media (max-width: 540px) { .sticker-star { top: 5px; width: 13px; height: 13px; } }
+.cover-quote--sticker { padding-top: 22px; }
+@media (max-width: 540px) { .cover-quote--sticker { padding-top: 14px; } }
+.sticker-star { top: 7px; width: 30px; height: 30px; }
+.cover-quote--sticker { padding-top: 30px; }
+@media (max-width: 540px) { .sticker-star { top: 4px; width: 18px; height: 18px; } .cover-quote--sticker { padding-top: 18px; } }
+/* Phone sticker: a bit bigger so the name fits inside the circle */
+@media (max-width: 540px) {
+  .cover-quote--sticker { width: 104px; height: 104px; top: -30px; right: -22px; padding: 22px 8px 8px; }
+  .cover-quote--sticker blockquote { font-size: 0.95rem; line-height: 1.05; }
+  .cover-quote--sticker figcaption { font-size: 0.42rem; letter-spacing: 0.05em; margin-top: 4px; padding-top: 4px; }
+  .sticker-star { top: 5px; width: 18px; height: 18px; }
 }

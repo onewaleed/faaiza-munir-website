@@ -1136,3 +1136,7 @@ textarea.form-control {
 .praise-card figcaption::before { content: "— "; }
 @media (max-width: 900px) { .praise-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .praise-grid { grid-template-columns: 1fr; } }
+
+/* Contact form privacy note */
+.form-privacy-note { font-size: var(--text-xs); color: var(--text-muted); line-height: 1.5; margin: 0 0 var(--space-md); }
+.form-privacy-note a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
