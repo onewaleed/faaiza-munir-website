@@ -107,3 +107,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+/* Reader Club: sign up without leaving the page (sends to Kit in the background) */
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".footer-newsletter-form").forEach((form) => {
+    form.addEventListener("submit", async (event) => {
+      if (!window.fetch) return; // old browser: normal form post
+      event.preventDefault();
+      const btn = form.querySelector("button");
+      const note = form.parentElement.querySelector(".footer-newsletter-consent");
+      btn.disabled = true;
+      btn.textContent = "...";
+      try {
+        const res = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        });
+        if (!res.ok) throw new Error(res.status);
+        form.style.display = "none";
+        if (note) {
+          note.classList.add("is-success");
+          note.setAttribute("role", "status");
+          note.innerHTML = "<strong>Nearly there!</strong> Check your inbox and click <strong>Confirm your subscription</strong>. Can&rsquo;t see it? Check spam or promotions.";
+        }
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = "Join";
+        if (note) note.textContent = "Sorry, that didn’t go through. Please try again in a moment.";
+      }
+    });
+  });
+});
