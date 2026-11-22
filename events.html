@@ -37,7 +37,7 @@
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/navigation.css?v=26">
-  <link rel="stylesheet" href="css/editorial-pages.css?v=39">
+  <link rel="stylesheet" href="css/editorial-pages.css?v=40">
 </head>
 
 <body>
@@ -292,12 +292,12 @@
           <p class="footer-newsletter-text">
             Receive exclusive dispatch letters, behind-the-scenes writing notes, and early cover reveals.
           </p>
-          <form class="footer-newsletter-form"
-            onsubmit="event.preventDefault(); alert('Thank you for subscribing to Faaiza\'s Reader Club!');">
-            <input type="email" placeholder="Your email address" required class="footer-newsletter-input"
+          <form class="footer-newsletter-form" action="https://app.kit.com/forms/10227477/subscriptions" method="post">
+            <input type="email" placeholder="Your email address" name="email_address" autocomplete="email" required class="footer-newsletter-input"
               aria-label="Email address for reader club">
             <button type="submit" class="footer-newsletter-btn">Join</button>
           </form>
+          <p class="footer-newsletter-consent">Unsubscribe any time. See our <a href="privacy.html">Privacy Policy</a>.</p>
         </div>
 
       </div>

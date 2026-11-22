@@ -868,6 +868,18 @@ textarea.form-control {
   background-color: var(--color-accent-sec-hover);
 }
 
+.footer-newsletter-consent {
+  font-size: 0.6875rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 6px;
+}
+
+.footer-newsletter-consent a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: underline;
+}
+
+
 .footer-bottom-bar {
   display: flex;
   flex-wrap: wrap;
@@ -1140,3 +1152,6 @@ textarea.form-control {
 /* Contact form privacy note */
 .form-privacy-note { font-size: var(--text-xs); color: var(--text-muted); line-height: 1.5; margin: 0 0 var(--space-md); }
 .form-privacy-note a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+
+/* Headshot credit under portrait captions */
+.photo-credit { display: block; margin-top: 4px; font-size: 0.6875rem; font-style: normal; font-weight: 400; opacity: 0.7; letter-spacing: 0.02em; }

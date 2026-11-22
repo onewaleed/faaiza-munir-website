@@ -783,3 +783,6 @@
   .cover-quote--sticker figcaption { font-size: 0.42rem; letter-spacing: 0.05em; margin-top: 4px; padding-top: 4px; }
   .sticker-star { top: 5px; width: 18px; height: 18px; }
 }
+/* Gold star removed: text back to the centre of the circle */
+.cover-quote--sticker { padding: 14px; }
+@media (max-width: 540px) { .cover-quote--sticker { padding: 8px; } }
